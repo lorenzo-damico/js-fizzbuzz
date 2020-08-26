@@ -3,3 +3,25 @@
 // e per i multipli di 5 stampi Buzz.
 // Per i numeri che sono sia multipli di 3 che di 5 stampi
 // FizzBuzz.
+var lista = document.getElementById('lista');
+
+function myFunction() {
+  lista.innerHTML = "";
+
+  for (var i = 1; i <= 100; i++) {
+
+    if ((i % 3 == 0) && (i % 5 != 0)) {
+      console.log("Fizz");
+      lista.innerHTML += "<li>Fizz</li>";
+    } else if ((i % 5 == 0) && (i % 3 != 0)) {
+      console.log("Buzz");
+      lista.innerHTML += "<li>Buzz</li>";
+    } else if ((i % 3 == 0) && (i % 5 == 0)) {
+      console.log("FizzBuzz");
+      lista.innerHTML += "<li>FizzBuzz</li>";
+    } else {
+      console.log(i);
+      lista.innerHTML += "<li>" + i + "</li>";
+    }
+  }
+}
