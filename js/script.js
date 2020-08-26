@@ -10,15 +10,18 @@ function myFunction() {
 
   for (var i = 1; i <= 100; i++) {
 
-    if ((i % 3 == 0) && (i % 5 != 0)) {
-      console.log("Fizz");
-      lista.innerHTML += "<li>Fizz</li>";
-    } else if ((i % 5 == 0) && (i % 3 != 0)) {
-      console.log("Buzz");
-      lista.innerHTML += "<li>Buzz</li>";
-    } else if ((i % 3 == 0) && (i % 5 == 0)) {
+    if ((i % 3 == 0) && (i % 5 == 0)) {
       console.log("FizzBuzz");
       lista.innerHTML += "<li>FizzBuzz</li>";
+
+    } else if (i % 3 == 0) {
+      console.log("Fizz");
+      lista.innerHTML += "<li>Fizz</li>";
+
+    } else if (i % 5 == 0) {
+      console.log("Buzz");
+      lista.innerHTML += "<li>Buzz</li>";
+
     } else {
       console.log(i);
       lista.innerHTML += "<li>" + i + "</li>";
